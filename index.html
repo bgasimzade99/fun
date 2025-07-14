@@ -2,27 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ÖNEMLİ -->
   <title>Will You Marry Me?</title>
   <style>
     body {
       background-color: #ffe6f0;
       font-family: 'Segoe UI', sans-serif;
       text-align: center;
-      margin-top: 100px;
+      padding: 5vh 10px;
       overflow: hidden;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 6vw; /* ekran boyutuna göre */
       color: #cc0066;
+      margin-bottom: 40px;
     }
 
     .btn {
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      margin: 20px;
+      padding: 4vw 8vw;
+      font-size: 5vw;
+      margin: 5vw;
       border: none;
-      border-radius: 10px;
+      border-radius: 15px;
       cursor: pointer;
       transition: 0.3s ease;
     }
@@ -40,11 +42,12 @@
 
     #gifContainer {
       display: none;
-      margin-top: 50px;
+      margin-top: 40px;
     }
 
     #gifContainer img {
-      width: 300px;
+      width: 80%;
+      max-width: 350px;
       border-radius: 20px;
     }
   </style>
@@ -60,10 +63,8 @@
     <img src="cats.gif" alt="Love GIF">
   </div>
 
-  <!-- Music (muted initially) -->
   <audio id="bgMusic" loop>
     <source src="mine.mp4" type="audio/mpeg">
-    Your browser does not support the audio element.
   </audio>
 
   <script>
@@ -80,9 +81,9 @@
     });
 
     yesBtn.addEventListener('click', () => {
-      alert('Congrats! Now your surname changed to Gasimova and you are mine ❤️');
+      alert('Congrats! Now your surname changed to Gasimova ❤️');
       gifContainer.style.display = 'block';
-      bgMusic.play(); // Start music on user interaction
+      bgMusic.play();
     });
 
     window.onload = () => {
